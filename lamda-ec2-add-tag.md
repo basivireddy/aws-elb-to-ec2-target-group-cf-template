@@ -1,5 +1,4 @@
-1. Create lambda python
-2. add below policy
+1. Create iam role of type lambada and add below policy
  ```
  {
     "Version": "2012-10-17",
@@ -16,3 +15,4 @@
     ]
 }
 ```
+2. Create lambda with python 3 add above role 
