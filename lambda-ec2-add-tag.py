@@ -18,9 +18,8 @@ def lambda_handler(event, context):
                 if "aws:cloudformation:stack-name" in tag.values():
                         instance_ids.append(instance_id)
     
-    print(instance_ids)
-    client = boto3.client('ec2')                  
-    response = client.create_tags(
+    print(instance_ids)                  
+    response = ec2.create_tags(
     Resources= instance_ids,
     Tags=[
         {
